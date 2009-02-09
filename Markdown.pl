@@ -738,12 +738,12 @@ sub _DoHeaders {
 	#
 	$text =~ s{ ^(.+)[ \t]*\n=+[ \t]*\n+ }{
                 my $h_level = 1 + $g_header_lower;
-		"<h$h_level>"  .  _RunSpanGamut($1)  .  "</h1>\n\n";
+		"<h$h_level>"  .  _RunSpanGamut($1)  .  "</h$h_level>\n\n";
 	}egmx;
 
 	$text =~ s{ ^(.+)[ \t]*\n-+[ \t]*\n+ }{
                 my $h_level = 2 + $g_header_lower;
-		"<h2>"  .  _RunSpanGamut($1)  .  "</h2>\n\n";
+		"<h$h_level>"  .  _RunSpanGamut($1)  .  "</h$h_level>\n\n";
 	}egmx;
 
 
